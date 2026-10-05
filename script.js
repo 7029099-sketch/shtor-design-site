@@ -113,8 +113,6 @@ const observer=new IntersectionObserver(entries=>{
 },{rootMargin:'-30% 0px -60% 0px',threshold:0});
 sections.forEach(s=>observer.observe(s));
 
-applyLanguage(detectLanguage(),false);
-
 const projectGalleries={
   bedroom:{
     images:[
@@ -240,3 +238,5 @@ document.addEventListener('keydown',e=>{
   if(e.key==='ArrowLeft') setGalleryImage(currentGalleryIndex-1);
   if(e.key==='ArrowRight') setGalleryImage(currentGalleryIndex+1);
 });
+
+applyLanguage(detectLanguage(),false);
