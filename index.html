@@ -17,121 +17,132 @@
     <a class="brand" href="#top" aria-label="SHTOR design">
       <span class="brand-main">SHTOR</span><span class="brand-script">design</span>
     </a>
-    <nav class="desktop-nav" aria-label="Основная навигация">
-      <a class="active" href="#top">Главная</a>
-      <a href="#projects">Портфолио</a>
-      <a href="#solutions">Решения</a>
-      <a href="#about">О студии</a>
-      <a href="#contact">Контакты</a>
+    <nav class="desktop-nav" aria-label="Основная навигация" data-i18n-aria="navAria">
+      <a class="active" href="#top" data-i18n="navHome">Главная</a>
+      <a href="#projects" data-i18n="navPortfolio">Портфолио</a>
+      <a href="#solutions" data-i18n="navSolutions">Решения</a>
+      <a href="#about" data-i18n="navAbout">О студии</a>
+      <a href="#contact" data-i18n="navContacts">Контакты</a>
     </nav>
-    <div class="header-contact">
+    <div class="header-tools">
       <a class="phone" href="tel:+380679815876"><span>☎</span><strong>067 981 5876</strong></a>
-      <a class="btn btn-small" href="#contact">Оставить заявку</a>
+      <div class="lang-switch" role="group" aria-label="Выбор языка" data-i18n-aria="langAria">
+        <button type="button" class="lang-btn is-active" data-lang="ru">RU</button>
+        <span>/</span>
+        <button type="button" class="lang-btn" data-lang="ua">UA</button>
+      </div>
+      <a class="btn btn-small header-cta" href="#contact" data-i18n="headerCta">Оставить заявку</a>
+      <button class="menu-toggle" aria-label="Открыть меню" data-i18n-aria="menuOpen" aria-expanded="false"><span></span><span></span></button>
     </div>
-    <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero-media"><img src="https://images.unsplash.com/photo-1754613389131-ea9b5f234cda?auto=format&fit=crop&fm=jpg&q=85&w=2400" alt="Светлая гостиная с многослойными шторами"></div>
+      <div class="hero-media"><img src="https://images.unsplash.com/photo-1754613389131-ea9b5f234cda?auto=format&fit=crop&fm=jpg&q=85&w=2400" alt="Светлая гостиная с многослойными шторами" data-i18n-alt="heroAlt"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <p class="eyebrow">Текстиль вдохновляет дом</p>
-        <h1>Шторы, которые становятся частью интерьера</h1>
-        <p class="hero-lead">Создаём текстильные решения, которые подчёркивают стиль пространства, работают со светом и остаются актуальными долгие годы.</p>
+        <p class="eyebrow" data-i18n="heroEyebrow">Текстиль вдохновляет дом</p>
+        <h1 data-i18n="heroTitle">Шторы, которые становятся частью интерьера</h1>
+        <p class="hero-lead" data-i18n="heroLead">Создаём текстильные решения, которые подчёркивают стиль пространства, работают со светом и остаются актуальными долгие годы.</p>
         <div class="hero-actions">
-          <a class="btn" href="#contact">Подобрать шторы <span>→</span></a>
-          <a class="btn btn-outline" href="#projects">Смотреть проекты</a>
+          <a class="btn" href="#contact"><span data-i18n="heroCta">Подобрать шторы</span> <span>→</span></a>
+          <a class="btn btn-outline" href="#projects" data-i18n="heroProjects">Смотреть проекты</a>
         </div>
         <div class="hero-benefits">
-          <div><span class="benefit-icon">⌁</span><p><b>Премиальные ткани</b><small>Фактуры под ваш интерьер</small></p></div>
-          <div><span class="benefit-icon">◇</span><p><b>Индивидуальный дизайн</b><small>Каждый проект уникален</small></p></div>
-          <div><span class="benefit-icon">⌂</span><p><b>Полный цикл</b><small>От замера до монтажа</small></p></div>
+          <div><span class="benefit-icon">⌁</span><p><b data-i18n="benefit1Title">Премиальные ткани</b><small data-i18n="benefit1Text">Фактуры под ваш интерьер</small></p></div>
+          <div><span class="benefit-icon">◇</span><p><b data-i18n="benefit2Title">Индивидуальный дизайн</b><small data-i18n="benefit2Text">Каждый проект уникален</small></p></div>
+          <div><span class="benefit-icon">⌂</span><p><b data-i18n="benefit3Title">Полный цикл</b><small data-i18n="benefit3Text">От замера до монтажа</small></p></div>
         </div>
       </div>
     </section>
 
     <section class="section projects" id="projects">
       <div class="section-head">
-        <div><p class="eyebrow">Портфолио</p><h2>Наши проекты</h2></div>
-        <p class="section-intro">Интерьеры, где текстиль не спорит с пространством, а собирает его в единую композицию.</p>
-        <a class="pill-link" href="#project-grid">Смотреть проекты <span>→</span></a>
+        <div><p class="eyebrow" data-i18n="portfolioEyebrow">Портфолио</p><h2 data-i18n="portfolioTitle">Наши проекты</h2></div>
+        <p class="section-intro" data-i18n="portfolioIntro">Интерьеры, где текстиль не спорит с пространством, а собирает его в единую композицию.</p>
+        <a class="pill-link" href="#project-grid"><span data-i18n="portfolioCta">Смотреть проекты</span> <span>→</span></a>
       </div>
 
       <div class="project-grid" id="project-grid">
         <article class="project-card project-card-tall">
-          <img src="https://images.unsplash.com/photo-1762010294857-3879a678a050?auto=format&fit=crop&fm=jpg&q=85&w=1800" alt="Спальня со шторами и мягким утренним светом">
-          <div class="project-caption"><div><b>Спальни</b><span>Уют, приватность и мягкий свет</span></div><span class="circle-arrow">→</span></div>
+          <img src="https://images.unsplash.com/photo-1762010294857-3879a678a050?auto=format&fit=crop&fm=jpg&q=85&w=1800" alt="Спальня со шторами и мягким утренним светом" data-i18n-alt="bedroomAlt">
+          <div class="project-caption"><div><b data-i18n="projectBedroom">Спальни</b><span data-i18n="projectBedroomText">Уют, приватность и мягкий свет</span></div><span class="circle-arrow">→</span></div>
         </article>
         <article class="project-card">
-          <img src="https://www.usdrapery.com/cdn/shop/files/3_40d0c96a-703e-4fc9-a856-31593beb2fc0.webp?v=1776927836&width=2048" alt="Столовая с римскими шторами">
-          <div class="project-caption"><div><b>Кухни и столовые</b><span>Практичность без компромисса в эстетике</span></div><span class="circle-arrow">→</span></div>
+          <img src="https://www.usdrapery.com/cdn/shop/files/3_40d0c96a-703e-4fc9-a856-31593beb2fc0.webp?v=1776927836&width=2048" alt="Столовая с римскими шторами" data-i18n-alt="diningAlt">
+          <div class="project-caption"><div><b data-i18n="projectDining">Кухни и столовые</b><span data-i18n="projectDiningText">Практичность без компромисса в эстетике</span></div><span class="circle-arrow">→</span></div>
         </article>
         <article class="project-card">
-          <img src="https://images.unsplash.com/photo-1746517757473-7c88850e539b?auto=format&fit=crop&fm=jpg&q=85&w=1800" alt="Современная гостиная с текстилем">
-          <div class="project-caption"><div><b>Гостиные</b><span>Текстиль для больших окон и воздуха</span></div><span class="circle-arrow">→</span></div>
+          <img src="https://images.unsplash.com/photo-1746517757473-7c88850e539b?auto=format&fit=crop&fm=jpg&q=85&w=1800" alt="Современная гостиная с текстилем" data-i18n-alt="livingAlt">
+          <div class="project-caption"><div><b data-i18n="projectLiving">Гостиные</b><span data-i18n="projectLivingText">Текстиль для больших окон и воздуха</span></div><span class="circle-arrow">→</span></div>
         </article>
       </div>
     </section>
 
     <section class="materials" id="solutions">
       <div class="materials-copy">
-        <p class="eyebrow">Натуральные материалы</p>
-        <h2>Ткани и фактуры</h2>
-        <p>Премиальные ткани, благородные фактуры и спокойные оттенки. Подбираем не по экрану, а в реальном освещении вашего интерьера.</p>
-        <a class="btn" href="#contact">Посмотреть коллекции <span>→</span></a>
-        <div class="palette" aria-label="Фирменная палитра"><i></i><i></i><i></i><i></i><small>Природная палитра<br>для вашего интерьера</small></div>
+        <p class="eyebrow" data-i18n="materialsEyebrow">Натуральные материалы</p>
+        <h2 data-i18n="materialsTitle">Ткани и фактуры</h2>
+        <p data-i18n="materialsText">Премиальные ткани, благородные фактуры и спокойные оттенки. Подбираем не по экрану, а в реальном освещении вашего интерьера.</p>
+        <a class="btn" href="#contact"><span data-i18n="materialsCta">Посмотреть коллекции</span> <span>→</span></a>
+        <div class="palette" aria-label="Фирменная палитра" data-i18n-aria="paletteAria"><i></i><i></i><i></i><i></i><small data-i18n="paletteText">Природная палитра<br>для вашего интерьера</small></div>
       </div>
-      <div class="materials-media"><img src="https://hoomstyle.com/cdn/shop/files/IMG_2692.png?v=1776949616&width=1400" alt="Подборка образцов тканей нейтральных и зелёных оттенков"></div>
+      <div class="materials-media"><img src="https://hoomstyle.com/cdn/shop/files/IMG_2692.png?v=1776949616&width=1400" alt="Подборка образцов тканей нейтральных и зелёных оттенков" data-i18n-alt="materialsAlt"></div>
     </section>
 
     <section class="section process" id="about">
       <div class="section-head process-head">
-        <div><p class="eyebrow">Как мы работаем</p><h2>От идеи до идеального результата</h2></div>
-        <p class="section-intro">Продуманный процесс, чтобы вы получили красивый интерьер без лишней суеты.</p>
+        <div><p class="eyebrow" data-i18n="processEyebrow">Как мы работаем</p><h2 data-i18n="processTitle">От идеи до идеального результата</h2></div>
+        <p class="section-intro" data-i18n="processIntro">Продуманный процесс, чтобы вы получили красивый интерьер без лишней суеты.</p>
       </div>
       <div class="steps">
-        <article><span class="step-no">01</span><span class="step-icon">⌇</span><h3>Замер</h3><p>Выезжаем, проводим точные замеры и смотрим интерьер на месте.</p></article>
-        <article><span class="step-no">02</span><span class="step-icon">▧</span><h3>Подбор ткани</h3><p>Собираем палитру, фактуры и сценарии света под пространство.</p></article>
-        <article><span class="step-no">03</span><span class="step-icon">✣</span><h3>Пошив</h3><p>Контролируем посадку, складку, обработку и каждую деталь изделия.</p></article>
-        <article><span class="step-no">04</span><span class="step-icon">▥</span><h3>Монтаж</h3><p>Устанавливаем карнизы, навешиваем и аккуратно отпариваем текстиль.</p></article>
-        <article><span class="step-no">05</span><span class="step-icon">⌁</span><h3>Финальный декор</h3><p>Добавляем подушки, покрывала и завершающие текстильные акценты.</p></article>
+        <article><span class="step-no">01</span><span class="step-icon">⌇</span><h3 data-i18n="step1Title">Замер</h3><p data-i18n="step1Text">Выезжаем, проводим точные замеры и смотрим интерьер на месте.</p></article>
+        <article><span class="step-no">02</span><span class="step-icon">▧</span><h3 data-i18n="step2Title">Подбор ткани</h3><p data-i18n="step2Text">Собираем палитру, фактуры и сценарии света под пространство.</p></article>
+        <article><span class="step-no">03</span><span class="step-icon">✣</span><h3 data-i18n="step3Title">Пошив</h3><p data-i18n="step3Text">Контролируем посадку, складку, обработку и каждую деталь изделия.</p></article>
+        <article><span class="step-no">04</span><span class="step-icon">▥</span><h3 data-i18n="step4Title">Монтаж</h3><p data-i18n="step4Text">Устанавливаем карнизы, навешиваем и аккуратно отпариваем текстиль.</p></article>
+        <article><span class="step-no">05</span><span class="step-icon">⌁</span><h3 data-i18n="step5Title">Финальный декор</h3><p data-i18n="step5Text">Добавляем подушки, покрывала и завершающие текстильные акценты.</p></article>
       </div>
     </section>
 
     <section class="cta-section" id="contact">
       <div class="cta-inner">
-        <p class="eyebrow">Консультация дизайнера</p>
-        <h2>Покажите интерьер.<br>Мы предложим направление.</h2>
-        <p>Работаем в Одессе и Одесской области. Дизайнер может приехать с образцами, чтобы выбрать ткань прямо в вашем освещении.</p>
+        <p class="eyebrow" data-i18n="contactEyebrow">Консультация дизайнера</p>
+        <h2 data-i18n-html="contactTitle">Покажите интерьер.<br>Мы предложим направление.</h2>
+        <p data-i18n="contactText">Работаем в Одессе и Одесской области. Дизайнер может приехать с образцами, чтобы выбрать ткань прямо в вашем освещении.</p>
         <div class="cta-actions">
-          <a class="btn btn-light" href="tel:+380679815876">Позвонить 067 981 5876</a>
-          <a class="btn btn-outline-light" href="mailto:shtordesignodessa@gmail.com">Написать на email</a>
+          <a class="btn btn-light" href="tel:+380679815876"><span data-i18n="call">Позвонить</span>&nbsp;067 981 5876</a>
+          <a class="btn btn-outline-light" href="mailto:shtordesignodessa@gmail.com" data-i18n="emailCta">Написать на email</a>
         </div>
       </div>
-      <div class="cta-image"><img src="https://images.unsplash.com/photo-1754613389131-ea9b5f234cda?auto=format&fit=crop&fm=jpg&q=85&w=1800" alt="Интерьер с текстильным оформлением"></div>
+      <div class="cta-image"><img src="https://images.unsplash.com/photo-1754613389131-ea9b5f234cda?auto=format&fit=crop&fm=jpg&q=85&w=1800" alt="Интерьер с текстильным оформлением" data-i18n-alt="contactAlt"></div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="footer-brand">
       <a class="brand brand-footer" href="#top"><span class="brand-main">SHTOR</span><span class="brand-script">design</span></a>
-      <p>Студия текстильного дизайна.<br>Интерьеры, в которые хочется возвращаться.</p>
+      <p data-i18n-html="footerBrand">Студия текстильного дизайна.<br>Интерьеры, в которые хочется возвращаться.</p>
     </div>
-    <div class="footer-nav"><a href="#top">Главная</a><a href="#projects">Портфолио</a><a href="#solutions">Решения</a><a href="#about">О студии</a><a href="#contact">Контакты</a></div>
+    <div class="footer-nav">
+      <a href="#top" data-i18n="navHome">Главная</a>
+      <a href="#projects" data-i18n="navPortfolio">Портфолио</a>
+      <a href="#solutions" data-i18n="navSolutions">Решения</a>
+      <a href="#about" data-i18n="navAbout">О студии</a>
+      <a href="#contact" data-i18n="navContacts">Контакты</a>
+    </div>
     <div class="footer-contact">
       <a href="tel:+380679815876">067 981 5876</a>
       <a href="mailto:shtordesignodessa@gmail.com">shtordesignodessa@gmail.com</a>
-      <span>Одесса и Одесская область</span>
+      <span data-i18n="location">Одесса и Одесская область</span>
     </div>
     <div class="footer-social">
-      <p>Следите за нами</p>
+      <p data-i18n="followUs">Следите за нами</p>
       <div class="socials">
         <a href="https://www.facebook.com/Shtordesign/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
         <span aria-label="Instagram">◎</span><span aria-label="Telegram">➤</span><span aria-label="TikTok">♪</span>
       </div>
     </div>
-    <div class="footer-bottom"><span>© 2026 SHTOR design</span><span>Временная версия для согласования</span></div>
+    <div class="footer-bottom"><span>© 2026 SHTOR design</span><span data-i18n="staging">Временная версия для согласования</span></div>
   </footer>
 
   <script src="script.js"></script>
