@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261005-projects-viewport">
+  <link rel="stylesheet" href="styles.css?v=20261005-gallery-v3">
 </head>
 <body>
   <header class="site-header" id="top">
@@ -65,19 +65,23 @@
         <a class="pill-link" href="#project-grid"><span data-i18n="portfolioCta">Смотреть проекты</span> <span>→</span></a>
       </div>
 
-      <div class="project-grid" id="project-grid">
-        <article class="project-card project-card-tall">
+      <div class="project-grid project-grid-premium" id="project-grid">
+        <button class="project-card project-card-featured" type="button" data-project="bedroom" aria-label="Открыть проект Спальни">
           <img src="https://images.unsplash.com/photo-1762010294857-3879a678a050?auto=format&fit=crop&fm=jpg&q=85&w=1800" alt="Спальня со шторами и мягким утренним светом" data-i18n-alt="bedroomAlt">
-          <div class="project-caption"><div><b data-i18n="projectBedroom">Спальни</b><span data-i18n="projectBedroomText">Уют, приватность и мягкий свет</span></div><span class="circle-arrow">→</span></div>
-        </article>
-        <article class="project-card">
+          <div class="project-caption project-caption-dark"><div><b data-i18n="projectBedroom">Спальни</b><span data-i18n="projectBedroomText">Уют, приватность и мягкий свет</span></div><span class="circle-arrow">→</span></div>
+        </button>
+        <button class="project-card project-card-wide" type="button" data-project="living" aria-label="Открыть проект Гостиные">
+          <img src="https://images.unsplash.com/photo-1754613389131-ea9b5f234cda?auto=format&fit=crop&fm=jpg&q=85&w=1800" alt="Современная гостиная с текстилем" data-i18n-alt="livingAlt">
+          <div class="project-caption project-caption-dark"><div><b data-i18n="projectLiving">Гостиные</b><span data-i18n="projectLivingText">Текстиль для больших окон и воздуха</span></div><span class="circle-arrow">→</span></div>
+        </button>
+        <button class="project-card project-card-small" type="button" data-project="dining" aria-label="Открыть проект Кухни и столовые">
           <img src="https://www.usdrapery.com/cdn/shop/files/3_40d0c96a-703e-4fc9-a856-31593beb2fc0.webp?v=1776927836&width=2048" alt="Столовая с римскими шторами" data-i18n-alt="diningAlt">
-          <div class="project-caption"><div><b data-i18n="projectDining">Кухни и столовые</b><span data-i18n="projectDiningText">Практичность без компромисса в эстетике</span></div><span class="circle-arrow">→</span></div>
-        </article>
-        <article class="project-card">
-          <img src="https://images.unsplash.com/photo-1746517757473-7c88850e539b?auto=format&fit=crop&fm=jpg&q=85&w=1800" alt="Современная гостиная с текстилем" data-i18n-alt="livingAlt">
-          <div class="project-caption"><div><b data-i18n="projectLiving">Гостиные</b><span data-i18n="projectLivingText">Текстиль для больших окон и воздуха</span></div><span class="circle-arrow">→</span></div>
-        </article>
+          <div class="project-caption project-caption-dark"><div><b data-i18n="projectDining">Кухни и столовые</b><span data-i18n="projectDiningText">Практичность без компромисса в эстетике</span></div><span class="circle-arrow">→</span></div>
+        </button>
+        <button class="project-card project-card-small" type="button" data-project="details" aria-label="Открыть проект Ткани и детали">
+          <img src="https://images.unsplash.com/photo-1746517757473-7c88850e539b?auto=format&fit=crop&fm=jpg&q=85&w=1800" alt="Текстильные детали в современном интерьере" data-i18n-alt="detailsAlt">
+          <div class="project-caption project-caption-dark"><div><b data-i18n="projectDetails">Ткани и детали</b><span data-i18n="projectDetailsText">Фактуры, оттенки и аккуратная посадка</span></div><span class="circle-arrow">→</span></div>
+        </button>
       </div>
     </section>
 
@@ -147,6 +151,40 @@
     <div class="footer-bottom"><span>© 2026 SHTOR design</span><span data-i18n="staging">Временная версия для согласования</span></div>
   </footer>
 
-  <script src="script.js?v=20261005-1117"></script>
+  <div class="project-viewer" id="projectViewer" hidden>
+    <div class="project-viewer-backdrop" data-gallery-close></div>
+    <section class="project-viewer-panel" role="dialog" aria-modal="true" aria-labelledby="galleryTitle">
+      <div class="gallery-topbar">
+        <button class="gallery-back" type="button" data-gallery-close><span>←</span><span data-i18n="galleryBack">Вернуться к проектам</span></button>
+        <h2 id="galleryTitle" data-gallery-title>Галерея проекта</h2>
+        <div class="gallery-nav">
+          <span class="gallery-counter"><b data-gallery-current>1</b> / <span data-gallery-total>5</span></span>
+          <button type="button" class="gallery-arrow" data-gallery-prev aria-label="Предыдущее фото">←</button>
+          <button type="button" class="gallery-arrow" data-gallery-next aria-label="Следующее фото">→</button>
+        </div>
+      </div>
+      <div class="gallery-layout">
+        <div class="gallery-thumbs" data-gallery-thumbs></div>
+        <div class="gallery-stage">
+          <img data-gallery-main src="" alt="">
+          <button type="button" class="gallery-zoom" data-gallery-zoom aria-label="Увеличить фото">⌕</button>
+        </div>
+        <div class="gallery-info">
+          <div>
+            <p class="eyebrow" data-i18n="galleryProject">Проект</p>
+            <h3 data-gallery-name></h3>
+            <p data-gallery-description></p>
+          </div>
+          <dl>
+            <div><dt data-i18n="galleryFabric">Ткань</dt><dd data-gallery-fabric></dd></div>
+            <div><dt data-i18n="galleryPalette">Палитра</dt><dd data-gallery-palette></dd></div>
+            <div><dt data-i18n="galleryType">Тип</dt><dd data-gallery-type></dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js?v=20261005-gallery-v3"></script>
 </body>
 </html>
